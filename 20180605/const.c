@@ -8,9 +8,16 @@
 using std::cout;
 using std::endl;
 
+#define kMax 100
 
+int test0()
+{
+	int num = 10;
+	cout << num * kMax << endl;
+	return 0;
+}
 
-int main()
+int test1()
 {
 	int a = 10;
 	int b = 22;
@@ -25,6 +32,10 @@ int main()
 	int * const pc = &a; // 指针常量（const pointer）
 	*pc = 11;
 //	pc = &b;
-
+	return 0;
+}
+int main()
+{
+	test0();
 	return 0;
 }
