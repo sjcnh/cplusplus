@@ -79,8 +79,8 @@ void test1()
 	cout << (s9 != s10) << endl;
 
 	// 将C++风格字符串转换成C风格字符串
-	//const char *pstr = s10.c_str();
-	pstr = s10.data();
+	const char *pstr = s10.c_str();
+	//pstr = s10.data();
 	cout << "pstr = " << pstr << endl;
 }
 
