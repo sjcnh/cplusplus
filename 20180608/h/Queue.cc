@@ -1,6 +1,6 @@
  ///
  /// @file    Queue.cc
- /// @author  sjcnh(itechie@163.com)
+ /// @author	LJW 
  /// @date    2018-06-08 22:29:56
  ///
  
@@ -9,14 +9,14 @@ using std::cout;
 using std::endl;
 
 
-const int kMax = 10;
+const int kMax = 5;
 
 class Queue
 {
 public:
 	Queue()
 	: _front(0)
-	, _back(0)
+	, _back(-1)
 	{
 
 	}
@@ -30,8 +30,8 @@ public:
 		}
 		else
 		{
-			_data[_back] = num;
 			++_back;
+			_data[_back] = num;
 		}
 	}
 
@@ -44,30 +44,36 @@ public:
 		}
 		else
 		{
-			for(int idx = _front; idx < _back; ++idx)
+			for(int idx = _front; idx != _back; ++idx)
 			{
+				_data[idx] = 0;
 				_data[idx] = _data[idx + 1];
 			}
 			--_back;
 		}
+		if(this->empty())
+		{
+			_data[_front] = 0;
+		}
+		cout << "pop()" << _back << endl;
 	}
 
 	int front()
 	{
-		cout << _data[_front] << endl;
+		cout << "front()" << _data[_front] << endl;
 		return _data[_front];
 
 	}
 
 	int back()
 	{
-		cout << _data[_back] << endl;
+		cout << "back()" << _data[_back] << endl;
 		return _data[_back];
 	}
 
 	bool empty()
 	{
-		if(_front == _back)
+		if(_front == (_back + 1))
 			return true;
 		else
 			return false;
@@ -82,7 +88,7 @@ public:
 	}
 
 private:
-	int _data[kMax];
+	int _data[kMax] = {0};
 	int _front;
 	int _back;
 
@@ -90,12 +96,42 @@ private:
 
 
 int main()
-{
+{	
 	Queue q;
-	q.push(1);
+	q.pop();
+	cout << q.empty() << endl;
+	
+	q.push(999);
 	q.front();
 	q.back();
-	q.push(2);
+	q.push(888);
+	q.front();
+	q.back();
+	q.push(777);
+	q.front();
+	q.back();
+	q.push(666);
+	q.front();
+	q.back();
+	q.push(555);
+	q.front();
+	q.back();
+	q.push(444);
+	q.front();
+	q.back();
+	q.pop();
+	q.front();
+	q.back();
+	q.pop();
+	q.front();
+	q.back();
+	q.pop();
+	q.front();
+	q.back();
+	q.pop();
+	q.front();
+	q.back();
+	q.pop();
 	q.front();
 	q.back();
 

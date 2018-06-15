@@ -1,0 +1,28 @@
+2018-06-13 20:42:59,314 [WARN] this is warn msg
+2018-06-13 20:42:59,315 [INFO] this is info msg
+2018-06-13 20:42:59,315 [ERROR] this is error msg
+2018-06-13 20:42:59,315 [DEBUG] this is debug msg
+2018-06-13 20:43:29,992 [WARN] [testMylog.cc:test2:32]this is warn msg
+2018-06-13 20:43:29,993 [INFO] [testMylog.cc:test2:33]this is info msg
+2018-06-13 20:43:29,993 [ERROR] [testMylog.cc:test2:34]this is error msg
+2018-06-13 20:43:29,993 [DEBUG] [testMylog.cc:test2:35]this is debug msg
+2018-06-13 20:43:29,993 [WARN] [testMylog.cc:test3:42]this is warn msg
+2018-06-13 20:43:29,993 [INFO] [testMylog.cc:test3:43]this is info msg
+2018-06-13 20:43:29,993 [ERROR] [testMylog.cc:test3:44]this is error msg
+2018-06-13 20:43:29,993 [DEBUG] [testMylog.cc:test3:45]this is debug msg
+2018-06-13 20:43:56,819 [WARN] [testMylog.cc:test2:32]this is warn msg
+2018-06-13 20:43:56,819 [INFO] [testMylog.cc:test2:33]this is info msg
+2018-06-13 20:43:56,820 [ERROR] [testMylog.cc:test2:34]this is error msg
+2018-06-13 20:43:56,820 [DEBUG] [testMylog.cc:test2:35]this is debug msg
+2018-06-13 20:43:56,821 [WARN] [testMylog.cc:test3:42]this is warn msg
+2018-06-13 20:43:56,821 [INFO] [testMylog.cc:test3:43]this is info msg
+2018-06-13 20:43:56,821 [ERROR] [testMylog.cc:test3:44]this is error msg
+2018-06-13 20:43:56,822 [DEBUG] [testMylog.cc:test3:45]this is debug msg
+2018-06-13 20:44:30,520 [WARN] [testMylog.cc:test2:32] this is warn msg
+2018-06-13 20:44:30,521 [INFO] [testMylog.cc:test2:33] this is info msg
+2018-06-13 20:44:30,522 [ERROR] [testMylog.cc:test2:34] this is error msg
+2018-06-13 20:44:30,522 [DEBUG] [testMylog.cc:test2:35] this is debug msg
+2018-06-13 20:44:30,522 [WARN] [testMylog.cc:test3:42] this is warn msg
+2018-06-13 20:44:30,523 [INFO] [testMylog.cc:test3:43] this is info msg
+2018-06-13 20:44:30,523 [ERROR] [testMylog.cc:test3:44] this is error msg
+2018-06-13 20:44:30,523 [DEBUG] [testMylog.cc:test3:45] this is debug msg

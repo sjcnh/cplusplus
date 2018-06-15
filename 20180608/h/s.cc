@@ -1,6 +1,6 @@
  ///
  /// @file    s.cc
- /// @author  sjcnh(itechie@163.com)
+ /// @author  LJW
  /// @date    2018-06-08 21:02:33
  ///
 #include <stdio.h> 

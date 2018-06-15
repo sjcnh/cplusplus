@@ -19,7 +19,6 @@ class Computer
 		: _brand(new char[20])
 		, _price(0.0)
 		{
-			stycpy(_brand, brand);
 			cout << "Computer()" << endl;
 		}
 
@@ -38,14 +37,14 @@ class Computer
 			cout << "Computer(const Computer &)" << endl;
 		}			
 
-		Computer & operator= (const Computer & rhs)
+		Computer & operator=(const Computer & rhs)
 		{
 			if(this != &rhs)
 			{
 				delete [] _brand;
 				_brand = new char[strlen(rhs._brand) + 1]();
 				strcpy(_brand, rhs._brand);
-				_price = rhs._price);
+				_price = rhs._price;
 			}
 			return *this;
 		}
@@ -57,13 +56,13 @@ class Computer
 			cout << "~Computer()" << endl;
 		}
 
-		}
 
 
 	private:
 		char * _brand;
 		float _price;
-}
+};
+
 int main()
 {
 

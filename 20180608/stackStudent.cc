@@ -24,6 +24,7 @@ class Student
 		~Student()
 		{
 			delete [] _name;
+
 			cout << "~Student()" << endl;
 		}
 
