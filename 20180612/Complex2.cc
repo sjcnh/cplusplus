@@ -1,5 +1,5 @@
  ///
- /// @file    Complex.cc
+ /// @file    Complex2.cc
  /// @author  LJW
  /// @date    2018-06-15 00:11:21
  ///
@@ -22,8 +22,13 @@ public:
 	{
 		cout << _dreal << " + " << _dimag << "i" << endl;
 	}
-	double getReal() const {	return _dreal;	}
-	double getImag() const {	return _dimag;	}
+
+	// 成员函数的形式
+	Complex operator+(const Complex &rhs)
+	{
+		return Complex(_dreal + rhs._dreal,
+					   _dimag + rhs._dimag);
+	}
 
 private:
 	double _dreal;
@@ -32,13 +37,6 @@ private:
 };
 
 
-// 普通元数的形式
-Complex operator+(const Complex &lhs, const Complex &rhs)
-{
-
-	return Complex(lhs.getReal() + rhs.getReal(), 
-				   lhs.getImag() + rhs.getImag());
-}
 
 // 运算符重载的功能不能指针对于内置类型数据
 // 只能作用于自定义类类型和枚举类型
