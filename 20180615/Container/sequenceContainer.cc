@@ -62,6 +62,7 @@ int main()
 	list<int> li(arr, arr + 5);
 	//list<int> li(10);
 	cout << "list's size = " << li.size() << endl;
+	// list 没有capacity()方法
 	//auto lit = li.begin(); //  auto可以进行自动推断
 //		while(lit != li.end())
 //		{
@@ -69,6 +70,7 @@ int main()
 //			++lit;
 //		}
 	display(li);
+	// list<int>::const_iterator lit = li.begin();
 	auto lit = li.begin();
 	cout << "*lit = " << *lit << endl;
 	li.insert(lit, 33);
@@ -77,11 +79,15 @@ int main()
 	lit = li.insert(lit, 99);
 	cout << "*lit = " << *lit << endl;
 	display(li);
+	li.insert(lit, 1000);
+	display(li);
 	// deque的使用
 	//
 	cout << "deque的使用" << endl;
 	deque<int> deq(arr, arr + 5);
 	cout << " dequeue[3] = " << deq[3] << endl;
+	// deque 没有 capacity
+	// cout << "dequeue's capacity" << deq.capacity() << endl;
 	display(deq);
 
 }
