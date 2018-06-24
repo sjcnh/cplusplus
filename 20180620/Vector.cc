@@ -25,7 +25,16 @@ public:
 	{};
 
 	~Vector()
-	{}
+	{
+		// 销毁对象 
+		while(_start != _finish)
+			_alloc.destroy(--_finish);
+
+		// 回收开辟空间
+		if(_start)
+			_alloc.deallocate(_start, capacity());
+	}
+
 	
 	iterator begin()
 	{
@@ -115,16 +124,23 @@ void Vector<T>::reallocate()
 
 class Point
 {
-
 public:
 	Point(int ix = 0, int iy = 0)
 	: _ix(ix)
 	, _iy(iy)
-	{}
+	{	cout << "Point(int, int)" << endl;	}
 
-	~Point();
+	~Point()
+	{	cout << "~Point()" << endl;	}
 
-	friend std::ostream & operator<<(std::ostream &os, const Point & rhs);
+	Point(const Point &rhs)
+	: _ix(rhs._ix)
+	, _iy(rhs._iy)
+	{
+		cout << "Point(const Point &)" << endl;
+	}
+
+	friend std::ostream & operator<<(std::ostream &os, const Point &rhs);
 
 private:
 	int _ix;
@@ -132,7 +148,7 @@ private:
 
 };
 
-std::ostream & operator<<(std::ostream &os, const Point & rhs)
+std::ostream & operator<<(std::ostream &os, const Point &rhs)
 {
 	os << "(" << rhs._ix
 	   << "," << rhs._iy
@@ -145,16 +161,28 @@ void display(Container &c)
 {
 	cout << "c's size = " << c.size() << endl
 		 << "c's capacity = " << c.capacity() << endl << endl;
-
 }
 	
 int main()
 {
 	Vector<Point> points;
 	display(points);
-	points.push_back(Point(1, 2));
+
+	points.push_back(Point(1, 1));
 	display(points);
 
+	points.push_back(Point(3, 3));
+	display(points);
+
+	points.push_back(Point(5, 5));
+	display(points);
+
+	Vector<Point>::iterator it = points.begin();
+	while(it != points.end())
+	{
+		cout << *it << endl;
+		++it;
+	}
 
 	return 0;
 }

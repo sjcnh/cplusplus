@@ -20,7 +20,6 @@ struct ListNode
 
 class Solution
 {
-
 public:
 	ListNode *ReverseList(ListNode *pHead)
 	{
